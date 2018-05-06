@@ -1,2 +1,2 @@
 # educ421.github.io
-EDUC421 - Projects
+This site is for publishing EDUC421 Projects
