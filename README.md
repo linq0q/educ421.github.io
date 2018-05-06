@@ -1,2 +1,2 @@
 # educ421.github.io
-Projects of EDUC421
+EDUC421 - Projects
