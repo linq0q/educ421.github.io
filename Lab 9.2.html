@@ -2,31 +2,42 @@
 <html>
 <head>
 	<style>
-		html,body{
-			height: 100%;
-			margin: 0;
-			padding: 0;
-		}
-		#map{
-			height: 100%;
-			width: 100%;
-		}
+	body {background-color: rgb(240, 240, 240);}
+	h1 {
+	color: red;
+	font-family: "Times New Roman";
+	font-size: 300%;
+	}
+	h2 {
+	color: blue;
+	font-family: "Times New Roman"
+	}
+    #map {
+		height: 100%;
+    }
+    html, body {
+		height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
 	</style>
+	<title> Lab 9.2: Google Maps JavaScript API </title>
 </head>
 <body>
+	<h1> This is a test website </h1>
+	<h2> You should see a Google Maps inserted below </h2>
 	<div id="map"></div>
 	<script>
-		function initMap(){
-			var romeColosseum = new google.maps.LatLng(41.8902, 12.4922);
-			var mapProperties = {
-				zoom:8,
-				center:romeColosseum
-			};
-			var map=new google.maps.Map(document.getElementById("map"),mapProperties);
-		}
-	</script>
-	<script async defer
-		src="https:maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-	</script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: -75.755818},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoE5IrpmkmmP6GidH-uwXoWd40_b7NOQI&callback=initMap"
+    async defer></script>
 </body>
 </html>
