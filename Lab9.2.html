@@ -27,6 +27,11 @@
 				center: lernerHall,
 				zoom: 16
 			});
+			var marker = new google.maps.Marker({
+				position: lernerHall,
+				map: map,
+				title:'Lerner Hall'
+			})
 			var panorama = new google.maps.StreetViewPanorama(
 				document.getElementById('pano'), {
 					position: lernerHall,
