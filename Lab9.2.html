@@ -36,10 +36,8 @@
 				position:lernerHall,
 				pov:pointOfView
 			}
-			var panorama={
-				new google.maps.StreetViewPanorama(document.getElementById("pano"),panoramaProperties);
-				map.setStreetView(panorama)
-			};
+			var panorama=new google.maps.StreetViewPanorama(document.getElementById("pano"),panoramaProperties);
+				map.setStreetView(panorama);
 			
 			var contentString='<h1>Lerner Hall</h1>'+
 			    '<p>This building is for student who study in Lerner College of Business & Economics'+
