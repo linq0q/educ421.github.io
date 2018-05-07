@@ -16,8 +16,8 @@
 	</style>
 </head>
 <body>
-	<h1> You will see a map below </h1>
-	<h2> Lerner Hall </h2>
+	<h2> You will see a map below </h2>
+	<h3> Lerner Hall </h3>
 	<div id="map"></div>
 	<div id="pano"></div>
 	<script>
@@ -39,25 +39,21 @@
 			var panorama=new google.maps.StreetViewPanorama(document.getElementById("pano"),panoramaProperties);
 			map.setStreetView(panorama);
 		
-			var contentString='<h1>Lerner Hall</h1>'+
-			    '<p>This building is for student who study in Lerner College of Business & Economics'+
-			    'It is located in Newark, Delaware</p>'+
-			    '<p>Attribution: University of Delaware,'+
-			    '<a href="https://en.wikipedia.org/wiki/Alfred_Lerner_College_of_Business_and_Economics,_The_University_of_Delaware">'+
-			    'https://en.wikipedia.org/wiki/Alfred_Lerner_College_of_Business_and_Economics,_The_University_of_Delaware</a>'+
-			    '***.</p>';
-			
-			var infowindow=new google.maps.InfoWindow({
-				content:contentString
-			});
-		
 			var marker=new google.maps.Marker({
 				position:lernerHall,
-				map:map,
-				title:'Lerner Hall'
+				map:map
 			});
 			marker.addListener('click',function(){
 				infowindow.open(map,marker);
+			});
+			
+			var contentString='<h1>Lerner Hall</h1>'+
+			    '<p>This building is for student who study in Lerner College of Business & Economics'+
+			    'It is located in Newark, Delaware</p>'+
+			    '<p>Attribution: University of Delaware</p>';
+			
+			var infowindow=new google.maps.InfoWindow({
+				content:contentString
 			});
 		}
     </script>
