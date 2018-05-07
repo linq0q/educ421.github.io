@@ -41,11 +41,27 @@
 				map: map,
 				title:'Lerner Hall'
 			})
+			
+			var contentString='<h1>Purnell Hall</h1>'+
+			    '<p>This building is for student who study in Lerner College of Business & Economics'+
+			    'It is located in Newark, Delaware</p>';
+			
+			var infowindow=new google.maps.InfoWindow({
+				content:contentString
+			});
 			var marker = new google.maps.Marker({
 				position: purnellHall,
 				map: map,
 				title:'purnellHall'
 			})
+			
+			var contentString='<h1>Smith Hall</h1>'+
+			    '<p>This building is for student who major in Computer Science'+
+			    'It is located in Newark, Delaware</p>';
+			
+			var infowindow=new google.maps.InfoWindow({
+				content:contentString
+			});
 			var marker = new google.maps.Marker({
 				position: smithHall,
 				map: map,
@@ -54,6 +70,7 @@
 			marker.addListener('click',function(){
 				infowindow.open(map,marker);
 			});
+			
 			var panorama = new google.maps.StreetViewPanorama(
 				document.getElementById('pano'), {
 					position: lernerHall,
