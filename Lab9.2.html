@@ -23,14 +23,15 @@
 	<script>
 		function initMap() {
 			var lernerHall = {lat: 39.680384, lng: -75.755838};
+			var purnellHall = {lat:39.680649, lng: -75.755251};
+			var smithHall = {lat:39.680518, lng: -75.754229};
 			var map = new google.maps.Map(document.getElementById('map'), {
 				center: lernerHall,
 				zoom: 16
 			});
 			var contentString='<h1>Lerner Hall</h1>'+
 			    '<p>This building is for student who study in Lerner College of Business & Economics'+
-			    'It is located in Newark, Delaware</p>'+
-			    '<p>Attribution: University of Delaware</p>';
+			    'It is located in Newark, Delaware</p>';
 			
 			var infowindow=new google.maps.InfoWindow({
 				content:contentString
@@ -39,6 +40,14 @@
 				position: lernerHall,
 				map: map,
 				title:'Lerner Hall'
+			var marker = new google.maps.Marker({
+				position: purnellHall,
+				map: map,
+				title:'purnellHall'
+			var marker = new google.maps.Marker({
+				position: smithHall,
+				map: map,
+				title:'Smith Hall'
 			})
 			marker.addListener('click',function(){
 				infowindow.open(map,marker);
