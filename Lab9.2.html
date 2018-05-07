@@ -40,6 +40,9 @@
 				map: map,
 				title:'Lerner Hall'
 			})
+			marker.addListener('click',function(){
+				infowindow.open(map,marker);
+			});
 			var panorama = new google.maps.StreetViewPanorama(
 				document.getElementById('pano'), {
 					position: lernerHall,
