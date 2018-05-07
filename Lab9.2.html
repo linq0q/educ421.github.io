@@ -26,16 +26,16 @@
 				};
 			var maps=new google.maps.Map(document.getElementById("map"),mapProperties);
 		};
-		var pointOfView={
-			heading:14.28,
-			pitch:-8.62
-		}
-		var panoramaProperties={
-			position:lernerHall,
-			pov:pointOfView
-		}
-		var panorama=new google.maps.StreetViewPanorama(document.getElementById("pano"),panoramaProperties);
-		map.setStreetView(panorama);
+			var pointOfView={
+				heading:14.28,
+				pitch:-8.62
+			}
+			var panoramaProperties={
+				position:lernerHall,
+				pov:pointOfView
+			}
+			var panorama=new google.maps.StreetViewPanorama(document.getElementById("pano"),panoramaProperties);
+			map.setStreetView(panorama);
 		}
     </script>
     <script async defer
