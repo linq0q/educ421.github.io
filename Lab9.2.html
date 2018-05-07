@@ -15,16 +15,28 @@
 </head>
 <body>
 	<div id="map"></div>
+	<div id="pano"></div>
 	<script>
-      function initMap(){
-        var lernerHall = new google.maps.LatLng(39.680682,-75.755789);
-		var mapProperties={
-			zoom:8,
-			center:lernerHall,
-			
-			};
-		var maps=new google.maps.Map(document.getElementById("map"),mapProperties);
-	}	
+		function initMap(){
+			var lernerHall = new google.maps.LatLng(39.680682,-75.755789);
+			var mapProperties={
+				zoom:8,
+				center:lernerHall,
+				};
+			var maps=new google.maps.Map(document.getElementById("map"),mapProperties);
+		};
+		var pointOfView={
+			heading:14.28,
+			pitch:-8.62
+		}
+		var panoramaProperties={
+			position:lernerHall,
+			pov:pointOfView
+		}
+		var panorama=new google.maps.StreetViewPanorama(
+			document.getElementById("pano"),panoramaProperties);
+		map.setStreetView(panorama);
+		}
     </script>
     <script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoE5IrpmkmmP6GidH-uwXoWd40_b7NOQI&callback=initMap">
