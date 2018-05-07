@@ -39,14 +39,6 @@
 			var panorama=new google.maps.StreetViewPanorama(document.getElementById("pano"),panoramaProperties);
 			map.setStreetView(panorama);
 		
-			var marker=new google.maps.Marker({
-				position:lernerHall,
-				map:map
-			});
-			marker.addListener('click',function(){
-				infowindow.open(map,marker);
-			});
-			
 			var contentString='<h1>Lerner Hall</h1>'+
 			    '<p>This building is for student who study in Lerner College of Business & Economics'+
 			    'It is located in Newark, Delaware</p>'+
@@ -54,6 +46,13 @@
 			
 			var infowindow=new google.maps.InfoWindow({
 				content:contentString
+			});
+			var marker=new google.maps.Marker({
+				position:lernerHall,
+				map:map
+			});
+			marker.addListener('click',function(){
+				infowindow.open(map,marker);
 			});
 		}
     </script>
