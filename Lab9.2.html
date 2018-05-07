@@ -27,6 +27,14 @@
 				center: lernerHall,
 				zoom: 16
 			});
+			var contentString='<h1>Lerner Hall</h1>'+
+			    '<p>This building is for student who study in Lerner College of Business & Economics'+
+			    'It is located in Newark, Delaware</p>'+
+			    '<p>Attribution: University of Delaware</p>';
+			
+			var infowindow=new google.maps.InfoWindow({
+				content:contentString
+			});
 			var marker = new google.maps.Marker({
 				position: lernerHall,
 				map: map,
